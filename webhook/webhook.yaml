@@ -1,0 +1,11 @@
+apiVersion: webhookconfig.keptn.sh/v1alpha1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.enrich.finished
+      requests:
+        - curl --request POST --data '{  {{ .data }}}'
+          https://webhook.site/4d796d31-f4f6-4c13-a2e6-ef5cb58d2db6
+      subscriptionID: 97bba63b-b82b-4456-a3f3-0721341908fe
