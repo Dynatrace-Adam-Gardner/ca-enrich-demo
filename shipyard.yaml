@@ -10,3 +10,4 @@ spec:
         - name: enrichment
           tasks:
           - name: enrich
+          - name: distribute-enriched-event
